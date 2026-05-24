@@ -2,10 +2,12 @@
 #include <string>
 #include <cmath>
 #include <math.h>
+#define DEGTORAD(D)((D * M_PI)/180.0) //converts degrees to radians
+#define RADTODEG(R)((180.0 * R)/M_PI) // converts radians to degrees
 
 int main()
 {
-    unsigned int R1, R2, T1, T2, radius;
+    unsigned int R1, R2, T1, T2, Tr1, Tr2, radius;
     std::string c = "c";
     std::string r = "r";
     std::string t = "t";
@@ -52,11 +54,14 @@ int main()
 
         else if (std::cin >> N && (N == "N" || N == "n"))
         {
+            double angle = RADTODEG(angle);
             std::cout << "Enter the length of the first side:" << std::endl;
-            std::cin >> T1;
+            std::cin >> Tr1;
             std::cout << "Enter the length of the second side: " << std::endl;
-            std::cin >> T2;
-            std::cout << "The Area of the triangle is : " << 0.5 * T1 * T2 << std::endl;
+            std::cin >> Tr2;
+            std::cout << "Enter the angle of a side in degrees: " << std::endl;
+            std::cin >> angle;
+            std::cout << "The Area of the triangle is : " << 0.5 * Tr1 * Tr2 *sin(angle)<< std::endl;
         }
     }
 

@@ -2,12 +2,12 @@
 #include <string>
 #include <cmath>
 #include <math.h>
-#define DEGTORAD(D)((D * M_PI)/180.0) //converts degrees to radians
-#define RADTODEG(R)((180.0 * R)/M_PI) // converts radians to degrees
+#define DEGTORAD(D) ((D * M_PI) / 180.0) // converts degrees to radians
+#define RADTODEG(R) ((180.0 * R) / M_PI) // converts radians to degrees
 
 int main()
 {
-    unsigned int R1, R2, T1, T2, Tr1, Tr2, radius;
+    float R1, R2, T1, T2, Tr1, Tr2, radius;
     std::string c = "c";
     std::string r = "r";
     std::string t = "t";
@@ -61,8 +61,21 @@ int main()
             std::cin >> Tr2;
             std::cout << "Enter the angle of a side in degrees: " << std::endl;
             std::cin >> angle;
-            std::cout << "The Area of the triangle is : " << 0.5 * Tr1 * Tr2 *sin(angle)<< std::endl;
+            std::cout << "The Area of the triangle is : " << 0.5 * Tr1 * Tr2 * sin(angle) << std::endl;
         }
+    }
+
+    if (shape == "z")
+    {
+        float a, b, height, trapArea;
+        trapArea = (a + b) * height * 0.5;
+        std::cout << "Enter the length of a" << std::endl;
+        std::cin >> a;
+        std::cout << "Enter the length of b" << std::endl;
+        std::cin >> b;
+        std::cout << "Enter the height" << std::endl;
+        std::cin >> height;
+        std::cout << "The area of the trapezium is: " << trapArea << std::endl;
     }
 
     std::cout << "Do you want to use this calculator again? (Y/N): " << std::endl;

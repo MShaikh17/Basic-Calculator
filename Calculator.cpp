@@ -61,7 +61,7 @@ int main()
             std::cin >> Tr2;
             std::cout << "Enter the angle of a side in degrees: " << std::endl;
             std::cin >> angle;
-            std::cout << "The Area of the triangle is : " << 0.5 * Tr1 * Tr2 * sin(angle) << std::endl;
+            std::cout << "The Area of the triangle is : " << 0.5 * Tr1 * Tr2 * sin(angle)<< std::endl;
         }
     }
 
